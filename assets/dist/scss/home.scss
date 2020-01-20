@@ -1,0 +1,16 @@
+// стили шаблонов
+@import "templates/header";
+@import "templates/footer";
+// Подключения блоков
+//@import "blocks/time-flag";
+// поключения библиотек
+//@import "libs/title";
+// стили шаблонов
+// поключения секций
+@import "sections/index/for-whom";
+
+
+//@media (min-width: $screen-sm) {}
+//@media (min-width: $screen-md) {}
+//@media (min-width: $screen-lg) {}
+//@media (min-width: $screen-xl) {}
