@@ -67,6 +67,8 @@
     background-image: url('../img/about-us-card.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: default;
+    transition: $transition-time;
     @media (min-width: $screen-md) {
       padding: 40px 20px;
     }
@@ -75,6 +77,12 @@
     }
     &--special{
       background-image: url('../img/about-us-card-special.jpg');
+    }
+
+    &:hover{
+      @media (min-width: $screen-md) {
+        box-shadow: 0 0 31.5px 3.5px rgba(0, 0, 0, .3);
+      }
     }
 
     &:first-child{

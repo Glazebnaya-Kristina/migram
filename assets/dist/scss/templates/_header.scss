@@ -8,4 +8,56 @@
 
 .header {
   $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  padding: 23px 0 29px;
+
+  &:after{
+    @include pseudo;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px);
+    background-color: rgba($white, .3);
+  }
+
+  &__inner{
+    @include container;
+    display: flex;
+    align-items: center;
+  }
+
+  &__navigation{
+    @media (min-width: $screen-lg) {
+      width: auto;
+      margin-left: auto;
+      margin-top: 10px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 5px;
+    }
+  }
+
+  &__logo-img{
+    width: 140px;
+    height: 45px;
+    @media (min-width: $screen-md) {
+      width: 163px;
+      height: 48px;
+    }
+  }
+
+  &__menu-burger{
+    margin-left: auto;
+    margin-top: 9px;
+    @media (min-width: $screen-md) {
+      margin-top: 2px;
+    }
+  }
+
+  &__lang{
+    margin-left: 15px;
+  }
 }

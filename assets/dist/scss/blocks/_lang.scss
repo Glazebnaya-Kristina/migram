@@ -1,0 +1,132 @@
+.lang{
+  position: relative;
+  padding-right: 20px;
+  padding-left: 15px;
+  @media (min-width: $screen-md) {
+    margin-left: 29px;
+    padding-left: 21px;
+    padding-right: 16px;
+  }
+
+  &:after{
+    @include pseudo;
+    right: 0;
+    top: 50%;
+    transform: rotate(90deg);
+    width: 6px;
+    height: 10px;
+    font-family: "fontello";
+    content: '\e814';
+    color: $color-blue;
+    font-size: 8px;
+    font-weight: 900;
+    @media (min-width: $screen-md) {
+      right: 4px;
+      top: 49%;
+    }
+  }
+
+  &:before{
+    @include pseudo;
+    width: 1px;
+    height: 54px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba($color-blue, .1);
+    @media (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &:hover{
+    .lang__list {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    position: absolute;
+    top: 46px;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 6px;
+    background-color: rgba($white, .8);
+    transition: $transition-time;
+    @media (min-width: $screen-md) {
+      right: -15px;
+      min-width: 180px;
+      padding: 22px 25px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  &__item{
+   &:not(:first-child){
+     @media (min-width: $screen-md) {
+       margin-top: 25px;
+     }
+   }
+  }
+
+  &__link{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    @media (min-width: $screen-md) {
+      width: auto;
+      height: auto;
+      //margin-top: 6px;
+      padding-left: 40px;
+    }
+
+    &:after{
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      box-shadow: 0 0 19.95px 1.05px rgba(0, 0, 0, 0.24);
+      @media (min-width: $screen-md) {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &--en{
+      &:after{
+        background-image: url('../img/en.png');
+      }
+    }
+    &--ge{
+      &:after{
+        background-image: url('../img/ge.jpg');
+      }
+    }
+    &--fr{
+      &:after{
+        background-image: url('../img/fr.jpg');
+      }
+    }
+    &--ru{
+      &:after{
+        background-image: url('../img/rus.jpg');
+      }
+    }
+  }
+
+  &__country{
+    display: none;
+    @media (min-width: $screen-md) {
+      display: block;
+      color: $color-blue;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}
