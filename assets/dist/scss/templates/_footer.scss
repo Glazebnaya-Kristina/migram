@@ -7,4 +7,84 @@
   &__title{
     @include hide-text;
   }
+
+  &__top-wrapper{
+    background-color: $black;
+  }
+
+  &__top{
+    @include container;
+    padding: 26px 0 30px;
+    @media (min-width: $screen-md) {
+      padding: 26px 0;
+    }
+    @media (min-width: $screen-xl) {
+      width: 1022px;
+      padding: 20px 0;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    @media (min-width: $screen-md) {
+      display: grid;
+      grid-column-gap: 23px;
+      grid-row-gap: 5px;
+      grid-template-columns: 1fr 1fr;
+      max-width: 496px;
+      margin: 0 auto;
+    }
+    @media (min-width: $screen-lg) {
+      grid-template-columns: repeat(4, auto);
+      max-width: 100%;
+    }
+  }
+
+  &__item{
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+    @media (min-width: $screen-md) {
+      text-align: left;
+    }
+    @media (min-width: $screen-xl) {
+      text-align: center;
+    }
+
+    &:not(:first-child){
+      margin-top: 15px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+      }
+    }
+
+
+    &:nth-child(3){
+      @media (min-width: $screen-md) {
+        text-align: right;
+      }
+      @media (min-width: $screen-xl) {
+        text-align: center;
+      }
+    }
+    &:nth-child(4){
+      @media (min-width: $screen-md) {
+        margin-left: 28px;
+      }
+      @media (min-width: $screen-xl) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__link{
+    &:hover,
+    &:focus{
+      outline: none;
+      color: $color-blue;
+    }
+  }
 }

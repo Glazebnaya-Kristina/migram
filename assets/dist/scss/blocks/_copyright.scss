@@ -1,0 +1,10 @@
+.copyright{
+  padding: 14px 0;
+  background-color: #141414;
+  color: $white;
+  font-size: 14px;
+  text-align: center;
+  @media (min-width: $screen-xl) {
+    padding: 12px 0;
+  }
+}
