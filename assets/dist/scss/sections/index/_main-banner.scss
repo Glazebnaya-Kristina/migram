@@ -10,8 +10,14 @@
 
   @media (min-width: $screen-sm) {
     background-image: url('../img/main-bg.jpg');
-    background-position: top center;
-    background-size: cover;
+    //background-position: top center;
+    //background-size: cover;
+    background-position: top left 37%;
+    background-size: 207%;
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 166px 0 134px;
   }
 
   &__inner {
@@ -34,9 +40,9 @@
     //background-color: rgba(4, 113, 184, 0.902);
     box-shadow: 0 0 31.5px 3.5px rgba(0, 0, 0, 0.21);
     @media (min-width: $screen-md) {
-      max-width: 424px;
+      max-width: 401px;
       width: 100%;
-      padding: 25px 15px 120px;
+      padding: 20px 27px 120px;
       background-color: transparent;
       box-shadow: none;
       border: none;
@@ -54,10 +60,9 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       @media (min-width: $screen-md) {
-        //display: block;
-        top: -40px;
-        left: -13px;
-        width: 446px;
+        top: -47px;
+        left: -20px;
+        width: 468px;
         background-image: url('../img/card-tabl.png');
       }
     }
@@ -79,7 +84,7 @@
     text-shadow: 0 0 31.5px rgba(255, 255, 255, 0.8);
     @media (min-width: $screen-md) {
       font-size: 42px;
-      line-height: 45px;
+      line-height: 49px;
     }
   }
 
@@ -92,6 +97,8 @@
     line-height: 22px;
     text-shadow: 4px 3px 14.5px rgba(255, 255, 255, 1);
     @media (min-width: $screen-md) {
+      max-width: 250px;
+      margin: 0 auto;
       margin-top: 10px;
       font-size: 25px;
       line-height: 28px;
@@ -116,8 +123,11 @@
     cursor: pointer;
 
     @media (min-width: $screen-md) {
-      max-width: 345px;
-      margin: 15px auto 0;
+      //max-width: 345px;
+      max-width: 100%;
+      margin: 24px auto 0;
+      padding: 17px 22px;
+      letter-spacing: 0.5px;
     }
 
     &:focus,
@@ -147,6 +157,11 @@
     padding: 25px;
     background-color: rgba($white, .8);
     border-radius: 6px;
+
+    @media (min-width: $screen-md) {
+      max-width: 290px;
+      margin-top: 0;
+    }
   }
 
   &__button-span {
@@ -166,7 +181,7 @@
     position: relative;
 
     &:not(:first-child) {
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     &:after {
