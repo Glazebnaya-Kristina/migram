@@ -134,9 +134,10 @@
   }
 
   &__button{
-    margin: 25px auto 0;
+    margin: 31px auto 0;
     @media (min-width: $screen-md) {
       display: none;
+      margin: 25px auto 0;
     }
   }
 }

@@ -1,3 +1,7 @@
+@import "helper/variables";
+@import "helper/mixins";
+@import "helper/container-mixins";
+
 // стили шаблонов
 @import "templates/header";
 @import "templates/footer";
@@ -9,6 +13,7 @@
 // поключения секций
 @import "sections/index/for-whom";
 @import "sections/index/about-us";
+@import "sections/index/advantages";
 
 
 //@media (min-width: $screen-sm) {}
