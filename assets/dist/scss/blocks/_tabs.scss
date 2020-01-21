@@ -1,0 +1,42 @@
+.tabs {
+  &__content {
+    display: none;
+  }
+  &__content.tabs-active {
+    display: block;
+    margin-top: 24px;
+  }
+
+  &__caption{
+    display: flex;
+    @include ul-reset;
+    li{
+      position: relative;
+      flex-basis: 50%;
+      padding-bottom: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      color: $color-blue;
+      text-align: center;
+      opacity: .5;
+      transition: $transition-time;
+
+      &:after{
+        @include pseudo;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba($color-blue, .5);
+      }
+    }
+    .tabs-active {
+      font-weight: 700;
+      opacity: 1;
+      &:after{
+        height: 2px;
+        background-color: $color-blue;
+      }
+    }
+  }
+}

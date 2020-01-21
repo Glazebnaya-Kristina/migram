@@ -27,33 +27,8 @@
     }
   }
 
-  &__wrapper{
-    &--column-2{
-      display: grid;
-      grid-gap: 30px;
-      @media (min-width: $screen-md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  }
-
   &__list{
     @include ul-reset;
-  }
-
-  &__wrapper-label{
-    display: grid;
-    grid-column-gap: 25px;
-    @media (min-width: $screen-md) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .label{
-      margin-top: 25px;
-      &:last-of-type{
-        grid-column: 1 / -1;
-      }
-    }
   }
 }
 
@@ -63,67 +38,26 @@
   &__name {
     @include hide-text;
   }
-
-  &--bbb{
-    height: 300px;
-    overflow: hidden;
-    max-width: 100px;
-    p{
-      font-size: 50px;
-    }
-  }
-  &--file{
-    position: relative;
-    max-width: 420px;
-    width: 100%;
-    height: 200px;
-    @media (min-width: $screen-md) {
-      height: 318px;
-    }
-  }
-
-  &--file-small{
-    position: relative;
-    max-width: 210px;
-    width: 100%;
-    height: 160px;
-  }
-
-  &--file-xs{
-    height: 100%;
-    position: relative;
-  }
 }
 
 
 .input{
   width: 100%;
-  padding: 20px 30px;
+  padding: 19px 20px 12px 45px;
   font: inherit;
-  //color: $text-color-gray-lighten;
+  color: #a8a9a9;
+  font-weight: 600;
   background-color: $white;
-  border-radius: 4px;
-  //border: 1px solid $color-gold;
+  border-radius: 6px;
+  border: none;
   transition: $transition-time;
-
+  box-shadow: 0 0 17.04px 6.96px rgba(0, 0, 0, 0.05);
   &:focus{
     outline: 0;
-    //border: 1px solid $color-gold-dark;
   }
-
   @include placeholder{
-    //color: $text-color-gray-lighten;
-    font-size: 16px;
-  }
-
-  &--textarea{
-    resize: none;
-    border-radius: 0;
-    //border: 1px solid $color-grey-input-textarea;
-    &:focus{
-      outline: 0;
-      border: 1px solid #bdbdbd;
-    }
+    font-weight: 600;
+    color: #a8a9a9;
   }
 }
 

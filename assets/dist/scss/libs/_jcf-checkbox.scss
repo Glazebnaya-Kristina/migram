@@ -3,13 +3,13 @@
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
   cursor: default;
   background: #fff;
-  border: 1px solid $color-blue;
-  height: 17px;
-  width: 18px;
-  border-radius: 4px;
+  border: none;
+  height: 16px;
+  width: 16px;
+  box-shadow: 0 0 17.04px 6.96px rgba(0, 0, 0, 0.05);
 }
 .jcf-checkbox span{
   position:absolute;
@@ -20,9 +20,9 @@
   left:50%;
   &:before{
     @include pseudo;
-    content: '\e82a';
+    content: '\e811';
     font-family: "fontello";
-    font-size: 10px;
+    font-size: 15px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -31,7 +31,9 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
   }
 }
-:root .jcf-checkbox span {    margin: -7px 0 0 -10px;}
+:root .jcf-checkbox span {
+  margin: -11px 0 0 -7px;
+}
 
 .jcf-checkbox input[type="checkbox"] {
   position: absolute;

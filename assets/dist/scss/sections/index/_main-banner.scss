@@ -1,0 +1,243 @@
+.main-banner {
+  $block-name: &; // #{$block-name}__element
+
+  margin-top: -97px;
+  padding: 129px 0 130px;
+  background-image: url('../img/main-bg-mob.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom -222px center;
+  background-size: 100% auto;
+
+  @media (min-width: $screen-sm) {
+    background-image: url('../img/main-bg.jpg');
+    background-position: top center;
+    background-size: cover;
+  }
+
+  &__inner {
+    @include container;
+    @media (min-width: $screen-xs) and (max-width: 767px) {
+      width: 320px;
+    }
+    @media (min-width: $screen-md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    position: relative;
+    z-index: 1;
+    padding: 25px 15px 30px;
+    //clip-path: polygon(4% 0, 100% 6%, 94% 100%, 0% 100%);
+    //border: 2px solid rgba(253, 253, 254, .3);
+    //background-color: rgba(4, 113, 184, 0.902);
+    box-shadow: 0 0 31.5px 3.5px rgba(0, 0, 0, 0.21);
+    @media (min-width: $screen-md) {
+      max-width: 424px;
+      width: 100%;
+      padding: 25px 15px 120px;
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+    }
+
+    &:after {
+      @include pseudo;
+      //display: none;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/card-mob.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      @media (min-width: $screen-md) {
+        //display: block;
+        top: -40px;
+        left: -13px;
+        width: 446px;
+        background-image: url('../img/card-tabl.png');
+      }
+    }
+
+  }
+
+  &__title {
+    margin: 0;
+    color: $white;
+  }
+
+  &__title-strong {
+    display: block;
+    font-weight: 800;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 34px;
+    text-shadow: 0 0 31.5px rgba(255, 255, 255, 0.8);
+    @media (min-width: $screen-md) {
+      font-size: 42px;
+      line-height: 45px;
+    }
+  }
+
+  &__span {
+    display: block;
+    margin-top: 11px;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 22px;
+    text-shadow: 4px 3px 14.5px rgba(255, 255, 255, 1);
+    @media (min-width: $screen-md) {
+      margin-top: 10px;
+      font-size: 25px;
+      line-height: 28px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 19px;
+    padding: 22px 17px;
+    padding-right: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-blue;
+    //border: none;
+    border: 1px solid transparent;
+    background-color: #d7e7f1;
+    border-radius: 6px;
+    transition: $transition-time;
+    cursor: pointer;
+
+    @media (min-width: $screen-md) {
+      max-width: 345px;
+      margin: 15px auto 0;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: $white;
+      border-color: $white;
+      background-color: transparent;
+      //background-color: rgba(#d7e7f1, .8);
+      #{$block-name}__icon {
+        color: $white;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 12px;
+    font-size: 22px;
+    color: $color-blue;
+    @media (min-width: $screen-md) {
+      font-size: 28px;
+    }
+  }
+
+  &__tabs {
+    margin-top: 17px;
+    padding: 25px;
+    background-color: rgba($white, .8);
+    border-radius: 6px;
+  }
+
+  &__button-span {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: block;
+      margin-left: 5px;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__label {
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &:after {
+      @include pseudo;
+      left: 20px;
+      top: 35%;
+      //transform: translateY(-50%);
+      font-family: "fontello";
+      color: $color-blue;
+    }
+
+    &--mail {
+      &:after {
+        content: '\e80e';
+      }
+    }
+
+    &--pass {
+      &:after {
+        content: '\e80f';
+      }
+    }
+  }
+
+  &__form-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba($color-blue, .1);
+  }
+
+  &__checkbox-title {
+    display: inline-flex;
+    width: 84px;
+    margin-left: 7px;
+    color: #a8a9a9;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+
+  &__remember-pass {
+    display: inline-flex;
+    width: 60px;
+    color: $color-blue;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  &__facebook-register{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 6px;
+    padding-left: 33px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #475993;
+    &:after{
+      @include pseudo;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 25px;
+      height: 25px;
+      background-image: url('../img/facebook.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
