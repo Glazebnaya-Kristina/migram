@@ -7,6 +7,7 @@
 @import "templates/footer";
 // Подключения блоков
 @import "blocks/dots";
+@import "blocks/contacts";
 // поключения библиотек
 @import "libs/slick";
 // стили шаблонов
@@ -14,6 +15,7 @@
 @import "sections/index/for-whom";
 @import "sections/index/about-us";
 @import "sections/index/advantages";
+@import "sections/index/register";
 
 
 //@media (min-width: $screen-sm) {}

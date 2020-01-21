@@ -1,0 +1,38 @@
+.contacts{
+  $block-name: &; // #{$block-name}__element
+
+  @include ul-reset;
+
+  &__item{
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child){
+      margin-top: 10px;
+    }
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:focus{
+      #{$block-name}__info{
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__icon{
+    color: $color-blue;
+    font-size: 18px;
+  }
+
+  &__info{
+    margin-left: 15px;
+    font-size: 21px;
+    font-weight: 600;
+    color: $color-black;
+    transition: $transition-time;
+  }
+}

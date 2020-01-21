@@ -1,18 +1,38 @@
 @import "../helper/mixins";
 
 .social {
+  $block-name: &; // #{$block-name}__element
   @include ul-reset;
   display: flex;
   align-items: center;
 
-  a{
-    &:hover,
-    &:focus {
-      outline: none;
+  &__item{
+    &:not(:first-child){
+      margin-left: 11px;
     }
   }
+  &__link{
+    padding: 11px;
+    border: 1px solid $color-blue;
+    border-radius: 50%;
+     &:hover,
+     &:focus {
+       outline: none;
+       border-color: $color-blue;
+       background-color: $color-blue;
+       #{$block-name}__icon{
+         color: $white;
+       }
+     }
+   }
 
   &__name {
     @include hide-text;
+  }
+
+  &__icon{
+    color: $color-blue;
+    transition: $transition-time;
+    font-size: 25px;
   }
 }
