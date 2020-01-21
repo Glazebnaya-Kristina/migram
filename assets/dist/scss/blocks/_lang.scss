@@ -40,26 +40,34 @@
   }
 
   &:hover{
-    .lang__list {
+    .lang__list-wrapper {
       opacity: 1;
       z-index: 1;
     }
   }
 
-  &__list{
-    @include ul-reset;
+  &__list-wrapper{
     position: absolute;
-    top: 46px;
+    top: 25px;
     opacity: 0;
     z-index: -1;
-    border-radius: 6px;
-    background-color: rgba($white, .8);
-    transition: $transition-time;
     @media (min-width: $screen-md) {
       right: -15px;
       min-width: 180px;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    width: 100%;
+    height: 100%;
+    margin-top: 16px;
+    transition: $transition-time;
+    @media (min-width: $screen-md) {
       padding: 22px 25px;
       box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.09);
+      border-radius: 6px;
+      background-color: rgba($white, .8);
     }
   }
 
@@ -117,6 +125,10 @@
       &:after{
         background-image: url('../img/rus.jpg');
       }
+    }
+    
+    &--active{
+      cursor: pointer;
     }
   }
 
