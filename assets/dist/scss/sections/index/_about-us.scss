@@ -70,6 +70,9 @@
     @media (min-width: $screen-md) {
       padding: 40px 20px;
     }
+    @media (min-width: $screen-xl) {
+      padding: 40px 34px;
+    }
     &--special{
       background-image: url('../img/about-us-card-special.jpg');
     }
@@ -94,6 +97,9 @@
       transform: none;
       margin-top: 39px;
     }
+    @media (min-width: $screen-xl) {
+      margin: 46px auto 0;
+    }
   }
 
   &__icon{
@@ -115,18 +121,27 @@
     }
     @media (min-width: $screen-xl) {
       padding: 0 80px;
+      margin-top: 9px;
     }
   }
 
   &__description{
     margin-top: 7px;
     text-align: center;
+    @media (min-width: $screen-xl) {
+      margin-top: 10px;
+    }
   }
 
   &__item-button{
     margin-top: 25px;
     width: 100%;
     font-size: 12px;
+    @media (min-width: $screen-xl) {
+      margin-top: 26px;
+      width: 100%;
+      font-size: 16px;
+    }
   }
 
   &__dots{
