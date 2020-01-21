@@ -1,0 +1,142 @@
+@import "../../helper/variables";
+@import "../../helper/mixins";
+@import "../../helper/container-mixins";
+
+
+.about-us{
+  $block-name: &; // #{$block-name}__element
+
+  padding: 62px 0 72px;
+  background-image: url('../img/about-us-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top right -372px;
+  background-size: auto 100%;
+  overflow: hidden;
+  @media (min-width: $screen-md) {
+    padding: 82px 0 83px;
+  }
+  @media (min-width: $screen-xl) {
+    padding: 101px 0 97px;
+    background-position: top center;
+    background-color: cover;
+  }
+  &__inner{
+    @include container;
+  }
+
+  &__title{
+    i{
+      top: -15px;
+    }
+  }
+
+  &__list{
+    @include ul-reset;
+    margin: 0 -26px;
+    margin-top: -7px;
+
+    @media (min-width: $screen-sm) {
+      max-width: 400px;
+      margin: -7px auto 0;
+    }
+    @media (min-width: $screen-md) {
+      max-width: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 28px 22px;
+      margin-top: 22px;
+    }
+    @media (min-width: $screen-xl) {
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 25px;
+    }
+
+    .slick-slide{
+      padding: 26px;
+      @media (min-width: $screen-sm) {
+        padding: 30px 35px;
+      }
+    }
+  }
+
+  &__item{
+    min-height: 313px;
+    padding: 32px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 31.5px 3.5px rgba(0, 0, 0, 0.1);
+    background-image: url('../img/about-us-card.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-width: $screen-md) {
+      padding: 40px 20px;
+    }
+    &--special{
+      background-image: url('../img/about-us-card-special.jpg');
+    }
+
+    &:first-child{
+      #{$block-name}__subtitle{
+        @media (min-width: $screen-md) {
+          padding: 0 48px;
+        }
+      }
+    }
+  }
+
+  &__item-content{
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50%;
+    @media (min-width: $screen-md) {
+      transform: none;
+      margin-top: 39px;
+    }
+  }
+
+  &__icon{
+    justify-content: center;
+    color: $color-blue;
+    font-size: 68px;
+  }
+
+  &__subtitle{
+    display: block;
+    margin-top: 4px;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-blue;
+    @media (min-width: $screen-md) {
+      padding: 0 70px;
+    }
+    @media (min-width: $screen-xl) {
+      padding: 0 80px;
+    }
+  }
+
+  &__description{
+    margin-top: 7px;
+    text-align: center;
+  }
+
+  &__item-button{
+    margin-top: 25px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  &__dots{
+    margin-top: -19px;
+  }
+
+  &__button{
+    margin: 25px auto 0;
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+}

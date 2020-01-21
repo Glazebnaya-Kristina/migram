@@ -30,11 +30,10 @@ body {
   min-height: 100%;
   word-break: break-word;
   font-family: $font-family;
-  font-size: 14px;
+  font-size: 15px;
   line-height: $line-height;
   text-align: left;
-  //color: $text-color-gray-dark2;
-
+  color: $color-gray;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

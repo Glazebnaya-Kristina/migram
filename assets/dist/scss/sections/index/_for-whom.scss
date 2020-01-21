@@ -5,10 +5,11 @@
 .for-whom {
   $block-name: &; // #{$block-name}__element
 
-  padding: 20px 0 125px;
+  padding: 20px 0 122px;
   background-image: url('../img/for-whom-bg.png');
   background-repeat: no-repeat;
   background-position: top 93px center;
+  overflow: hidden;
   @media (min-width: $screen-md) {
     padding: 36px 0 165px;
     background-image: url('../img/for-whom-bg-tabl.png');

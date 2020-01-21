@@ -2,12 +2,13 @@
 @import "templates/header";
 @import "templates/footer";
 // Подключения блоков
-//@import "blocks/time-flag";
+@import "blocks/dots";
 // поключения библиотек
-//@import "libs/title";
+@import "libs/slick";
 // стили шаблонов
 // поключения секций
 @import "sections/index/for-whom";
+@import "sections/index/about-us";
 
 
 //@media (min-width: $screen-sm) {}

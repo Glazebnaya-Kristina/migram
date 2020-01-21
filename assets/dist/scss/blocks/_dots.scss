@@ -1,0 +1,27 @@
+.dots{
+  @include ul-reset;
+  display: flex;
+  justify-content: center;
+  li{
+
+    &:not(:first-child){
+      margin-left: 8px;
+    }
+  }
+
+  .slick-active{
+    button{
+      background-color: rgba($color-blue, 1);
+    }
+  }
+  button{
+    width: 13px;
+    height: 13px;
+    border:  none;
+    border-radius: 50%;
+    font-size: 0;
+    background-color: rgba($color-blue, .3);
+    transition: $transition-time;
+    outline: none;
+  }
+}
