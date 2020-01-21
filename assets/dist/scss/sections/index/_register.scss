@@ -3,8 +3,13 @@
   padding: 120px 0 43px;
   background-image: url('../img/register-mob.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-width: $screen-sm) {
+    background-position: top left -200px;
+    background-image: url('../img/register-desc.jpg');
+  }
   @media (min-width: $screen-md) {
-    padding: 82px 0 83px;
+    padding: 177px 0 66px;
   }
   @media (min-width: $screen-xl) {
     padding: 97px 0 97px;
@@ -20,16 +25,26 @@
     position: relative;
     z-index: 1;
     padding: 16px;
+
+    @media (min-width: $screen-md) {
+      padding: 28px 0;
+    }
     
     &:after{
       @include pseudo;
       top: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       z-index: -1;
-      width: 100%;
+      //width: 100%;
+      width: 290px;
       height: 100%;
       background-image: url('../img/register-decor.png');
       background-repeat: no-repeat;
+      @media (min-width: $screen-md) {
+        width: 707px;
+        background-image: url('../img/register-decor-desc.png');
+      }
     }
   }
   &__subtitle{
@@ -39,6 +54,9 @@
     color: $white;
     text-transform: uppercase;
     text-align: center;
+    @media (min-width: $screen-md) {
+      font-size: 51px;
+    }
   }
 
   &__name{
@@ -49,12 +67,18 @@
     text-transform: uppercase;
     font-size: 17px;
     font-weight: 600;
+    @media (min-width: $screen-md) {
+      font-size: 39px;
+    }
   }
   &__content{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-top: 183px;
+    @media (min-width: $screen-md) {
+      margin-top: 218px;
+    }
   }
 
   &__logo{
@@ -67,17 +91,31 @@
     justify-content: space-between;
     max-width: 290px;
     margin-top: 19px;
+    @media (min-width: $screen-md) {
+      max-width: 312px;
+      width: 100%;
+      margin-top: 24px;
+    }
   }
 
   &__systems-img{
     width: 141px;
+    @media (min-width: $screen-md) {
+      width: 153px;
+    }
   }
 
   &__social{
     margin-top: 25px;
+    @media (min-width: $screen-md) {
+      margin-top: 29px;
+    }
   }
 
   &__contacts{
     margin-top: 52px;
+    @media (min-width: $screen-md) {
+      margin-top: 60px;
+    }
   }
 }

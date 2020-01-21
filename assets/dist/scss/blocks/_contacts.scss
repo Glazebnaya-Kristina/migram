@@ -2,13 +2,20 @@
   $block-name: &; // #{$block-name}__element
 
   @include ul-reset;
-
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: center;
+  }
   &__item{
     display: flex;
     align-items: center;
 
     &:not(:first-child){
       margin-top: 10px;
+      @media (min-width: $screen-md) {
+        margin-top: 0;
+        margin-left: 42px;
+      }
     }
   }
 
