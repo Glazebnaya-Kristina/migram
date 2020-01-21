@@ -11,8 +11,12 @@
   @media (min-width: $screen-md) {
     padding: 177px 0 66px;
   }
+  @media (min-width: $screen-lg) {
+    background-position: top left;
+  }
   @media (min-width: $screen-xl) {
-    padding: 97px 0 97px;
+    padding: 261px 0 64px;
+    background-position: top -63px left;
   }
   &__inner {
     @include container;
@@ -78,6 +82,9 @@
     margin-top: 183px;
     @media (min-width: $screen-md) {
       margin-top: 218px;
+    }
+    @media (min-width: $screen-xl) {
+      margin-top: 317px;
     }
   }
 
