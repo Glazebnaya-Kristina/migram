@@ -1,29 +1,9 @@
-// Подключения блоков
-//@import "../blocks/button";
-// Подключения спомогательных файлов
-//@import "../helper/animations";
-//
-// Подключения бибилиотек
-//@import "../libs/slick";
-
 .header {
   $block-name:                &; // #{$block-name}__element
 
   position: relative;
-  z-index: 1;
-  //overflow: hidden;
+  z-index: 2;
   padding: 23px 0 29px;
-
-  //&:after{
-  //  @include pseudo;
-  //  top: 0;
-  //  left: -5px;
-  //  z-index: -1;
-  //  width: 103%;
-  //  height: 100%;
-  //  filter: blur(3px);
-  //  background-color: rgba(255,255,255,0.9);
-  //}
 
   &__overlay{
     position: absolute;

@@ -1,6 +1,8 @@
 .main-banner {
   $block-name: &; // #{$block-name}__element
 
+  position: relative;
+  min-height: 951px;
   margin-top: -97px;
   padding: 129px 0 130px;
   background-image: url('../img/main-bg-mob.jpg');
@@ -9,15 +11,44 @@
   background-size: 100% auto;
 
   @media (min-width: $screen-sm) {
-    background-image: url('../img/main-bg.jpg');
-    //background-position: top center;
-    //background-size: cover;
+    background-image: url('../img/main-bg-desc.jpg');
+    background-size: cover;
     background-position: top left 37%;
-    background-size: 207%;
   }
 
   @media (min-width: $screen-md) {
+    min-height: 712px;
     padding: 166px 0 134px;
+  }
+  @media (min-width: $screen-xl) {
+    min-height: 818px;
+    padding: 179px 0 238px;
+    background-size: 140%;
+  }
+  @media (min-width: 1850px) {
+    background-size: cover;
+  }
+
+  &:after{
+    @include pseudo;
+    display: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url('../img/cloud.png');
+    background-repeat: no-repeat;
+
+    @media (min-width: $screen-md) {
+      display: block;
+      height: 37%;
+      background-size: 100% 196%;
+      background-position: top -42px center;
+    }
+    @media (min-width: $screen-lg) {
+      height: 47%;
+      background-size: 100% 190%;
+      background-position: top -63px center;
+    }
   }
 
   &__inner {
@@ -33,24 +64,27 @@
 
   &__card {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     padding: 25px 15px 30px;
-    //clip-path: polygon(4% 0, 100% 6%, 94% 100%, 0% 100%);
-    //border: 2px solid rgba(253, 253, 254, .3);
-    //background-color: rgba(4, 113, 184, 0.902);
     box-shadow: 0 0 31.5px 3.5px rgba(0, 0, 0, 0.21);
     @media (min-width: $screen-md) {
       max-width: 401px;
       width: 100%;
-      padding: 20px 27px 120px;
+      padding: 20px 27px 0;
       background-color: transparent;
       box-shadow: none;
       border: none;
     }
+    @media (min-width: $screen-lg) {
+      max-width: 545px;
+    }
+    @media (min-width: $screen-xl) {
+      max-width: 614px;
+      padding: 47px 0 0;
+    }
 
     &:after {
       @include pseudo;
-      //display: none;
       top: 0;
       left: 0;
       z-index: -1;
@@ -63,15 +97,29 @@
         top: -47px;
         left: -20px;
         width: 468px;
+        height: 397px;
         background-image: url('../img/card-tabl.png');
       }
-    }
 
+      @media (min-width: $screen-lg) {
+        top: -37px;
+        left: -41px;
+        width: 647px;
+        height: 293px;
+      }
+      @media (min-width: $screen-xl) {
+        left: -99px;
+        top: -27px;
+        width: 845px;
+        height: 357px;
+      }
+    }
   }
 
   &__title {
     margin: 0;
     color: $white;
+    z-index: 1;
   }
 
   &__title-strong {
@@ -85,6 +133,12 @@
     @media (min-width: $screen-md) {
       font-size: 42px;
       line-height: 49px;
+    }
+    @media (min-width: $screen-lg) {
+      text-align: left;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 51px;
     }
   }
 
@@ -103,9 +157,20 @@
       font-size: 25px;
       line-height: 28px;
     }
+    @media (min-width: $screen-lg) {
+      max-width: none;
+      margin: 0;
+      text-align: left;
+      font-size: 29px;
+    }
+    @media (min-width: $screen-xl) {
+      font-size: 37px;
+      margin-top: 19px;
+    }
   }
 
   &__button {
+    z-index: 1;
     display: flex;
     align-items: center;
     width: 100%;
@@ -123,11 +188,17 @@
     cursor: pointer;
 
     @media (min-width: $screen-md) {
-      //max-width: 345px;
       max-width: 100%;
       margin: 24px auto 0;
       padding: 17px 22px;
       letter-spacing: 0.5px;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: max-content;
+      margin: 24px 0 0;
+    }
+    @media (min-width: $screen-xl) {
+      margin: 31px 0 0;
     }
 
     &:focus,
@@ -136,7 +207,6 @@
       color: $white;
       border-color: $white;
       background-color: transparent;
-      //background-color: rgba(#d7e7f1, .8);
       #{$block-name}__icon {
         color: $white;
       }
@@ -150,9 +220,13 @@
     @media (min-width: $screen-md) {
       font-size: 28px;
     }
+    @media (min-width: $screen-xl) {
+      margin-right: 23px;
+    }
   }
 
   &__tabs {
+    z-index: 1;
     margin-top: 17px;
     padding: 25px;
     background-color: rgba($white, .8);
@@ -161,6 +235,9 @@
     @media (min-width: $screen-md) {
       max-width: 290px;
       margin-top: 0;
+    }
+    @media (min-width: $screen-lg) {
+      max-width: 376px;
     }
   }
 
@@ -181,14 +258,16 @@
     position: relative;
 
     &:not(:first-child) {
-      margin-top: 20px;
+      margin-top: 10px;
+      @media (min-width: $screen-xl) {
+        margin-top: 9px;
+      }
     }
 
     &:after {
       @include pseudo;
       left: 20px;
-      top: 35%;
-      //transform: translateY(-50%);
+      top: 31%;
       font-family: "fontello";
       color: $color-blue;
     }
@@ -236,7 +315,6 @@
 
   &__facebook-register{
     position: relative;
-    margin: 0 auto;
     margin-top: 20px;
     margin-left: 6px;
     padding-left: 33px;

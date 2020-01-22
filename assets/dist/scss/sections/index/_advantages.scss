@@ -107,8 +107,11 @@
     &:nth-child(4){
       #{$block-name}__wrapper-icon{
         &:after{
+          @media (min-width: $screen-md){
+            display: none;
+          }
           @media (min-width: $screen-lg) {
-            //left: auto;
+            display: block;
             left: -50%;
             bottom: 50%;
             transform: translateY(-50%) translateX(-50%);

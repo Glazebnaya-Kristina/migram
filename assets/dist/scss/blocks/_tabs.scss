@@ -3,7 +3,10 @@
     display: none;
   }
   &__content.tabs-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 24px;
   }
 

@@ -25,6 +25,12 @@ $(document).ready(function () {
          }
       ]
    });
+
+   $('ul.tabs__caption').on('click', 'li:not(.tabs-active)', function () {
+      $(this).addClass('tabs-active').siblings().removeClass('tabs-active').closest('div.tabs').find('div.tabs__content').removeClass('tabs-active').eq($(this).index()).addClass('tabs-active');
+   });
+
+   jcf.replaceAll();
 });
 
 

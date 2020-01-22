@@ -43,7 +43,7 @@
 
 .input{
   width: 100%;
-  padding: 17px 20px 12px 45px;
+  padding: 17px 20px 17px 45px;
   font: inherit;
   color: #a8a9a9;
   font-weight: 600;
@@ -54,6 +54,7 @@
   box-shadow: 0 0 17.04px 6.96px rgba(0, 0, 0, 0.05);
   &:focus{
     outline: 0;
+    box-shadow: 0 0 17.04px 6.96px rgba(0, 0, 0, 0.1);
   }
   @include placeholder{
     font-weight: 600;
